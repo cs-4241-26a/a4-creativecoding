@@ -1,0 +1,12 @@
+{
+  "name": "a4-chris-cardaropoli",
+  "version": "1.0.0",
+  "description": "Interactive multimedia experience using Canvas and SVG",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
