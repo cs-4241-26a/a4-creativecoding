@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PokéCatch Adventure</title>
+
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/main.js" defer></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>🔴 PokéCatch Adventure</h1>
+    <p>Catch them all in your own interactive Pokémon adventure!</p>
+  </header>
+
+  <main>
+
+    <!-- LEFT CONTROL PANEL -->
+
+    <section class="controls">
+
+      <h2>⚙️ Game Settings</h2>
+
+      <label for="ballSpeed">Pokéball Speed</label>
+      <input id="ballSpeed" type="range"
+             min="3" max="20" value="10">
+      <span id="ballSpeedValue">10</span>
+
+      <label for="pokemonSpeed">Pokémon Speed</label>
+      <input id="pokemonSpeed" type="range"
+             min="0.5" max="5" step="0.5" value="2">
+      <span id="pokemonSpeedValue">2</span>
+
+      <label for="spawnRate">Spawn Rate</label>
+      <input id="spawnRate" type="range"
+             min="1" max="5" value="2">
+      <span id="spawnRateValue">2</span>
+
+      <label for="ballSize">Pokéball Size</label>
+      <input id="ballSize" type="range"
+             min="8" max="30" value="15">
+      <span id="ballSizeValue">15</span>
+
+      <label for="maxPokemon">Maximum Pokémon</label>
+      <input id="maxPokemon" type="range"
+             min="1" max="15" value="6">
+      <span id="maxPokemonValue">6</span>
+
+      <label for="difficulty">Difficulty</label>
+      <select id="difficulty">
+        <option value="easy">Easy</option>
+        <option value="normal" selected>Normal</option>
+        <option value="hard">Hard</option>
+      </select>
+
+      <div class="buttons">
+        <button id="startBtn">Start Game</button>
+        <button id="pauseBtn">Pause</button>
+        <button id="resetBtn">Restart</button>
+      </div>
+
+    </section>
+
+    <!-- GAME AREA -->
+
+    <section class="game-area">
+
+      <div class="stats">
+        <span>⭐ Score: <strong id="score">0</strong></span>
+        <span>🔴 Pokéballs: <strong id="balls">30</strong></span>
+        <span>🏆 Caught: <strong id="caught">0</strong></span>
+      </div>
+
+      <canvas id="gameCanvas" width="900" height="550"></canvas>
+
+      <div id="message" role="status" aria-live="polite">
+        Press Start Game to begin!
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- INSTRUCTIONS -->
+
+  <section class="instructions">
+
+    <h2>📖 How to Play</h2>
+
+    <p>1. Click Start Game to begin your adventure.</p>
+
+    <p>2. Pokémon will appear and move around the field.</p>
+
+    <p>3. Click on a Pokémon to throw a Pokéball toward it.</p>
+
+    <p>4. Successfully catching Pokémon increases your score.</p>
+
+    <p>5. You have 30 Pokéballs. Try to catch as many as possible!</p>
+
+    <p>6. Adjust the settings to customize the gameplay.</p>
+
+    <p>7. Use Pause to stop the game or Restart to play again.</p>
+
+  </section>
+
+  <footer>
+    CS4241 A4 Creative Coding | PokéCatch Adventure
+  </footer>
+
+</body>
+</html>

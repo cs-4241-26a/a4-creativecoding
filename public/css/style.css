@@ -1,0 +1,192 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #101827;
+  color: white;
+}
+
+
+header {
+  text-align: center;
+  padding: 25px;
+  background: linear-gradient(135deg, #f54242, #8b0000);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+header p {
+  margin-bottom: 0;
+  color: #ffe9e9;
+}
+
+
+main {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  align-items: flex-start;
+}
+
+.controls {
+  width: 270px;
+  flex-shrink: 0;
+  padding: 20px;
+  background: #1d293b;
+  border-radius: 15px;
+  border: 1px solid #34445c;
+}
+
+.controls h2 {
+  margin-top: 0;
+  color: #ffda55;
+}
+
+label {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: #ffda55;
+  cursor: pointer;
+}
+
+.controls span {
+  display: block;
+  text-align: right;
+  color: #ffda55;
+  font-weight: bold;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  background: #101827;
+  color: white;
+  border: 1px solid #52627b;
+  border-radius: 8px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  background: #ffda55;
+  color: #151515;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #ffe98a;
+  transform: translateY(-2px);
+}
+
+#startBtn {
+  background: #43d17a;
+}
+
+#resetBtn {
+  background: #ff6969;
+}
+
+.game-area {
+  flex: 1;
+  min-width: 0;
+  background: #1d293b;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 15px;
+  background: #101827;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.stats strong {
+  color: #ffda55;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #80c76b;
+  border: 3px solid #536c45;
+  border-radius: 12px;
+  cursor: crosshair;
+  touch-action: none;
+}
+
+#message {
+  text-align: center;
+  padding: 15px;
+  color: #ffda55;
+  font-weight: bold;
+  min-height: 50px;
+}
+
+.instructions {
+  margin: 0 20px 20px;
+  padding: 25px;
+  background: #1d293b;
+  border-radius: 15px;
+}
+
+.instructions h2 {
+  color: #ffda55;
+}
+
+.instructions p {
+  line-height: 1.6;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #aab6c7;
+}
+
+
+@media (max-width: 800px) {
+  main {
+    flex-direction: column;
+  }
+
+  .controls {
+    width: 100%;
+  }
+
+  header h1 {
+    font-size: 26px;
+  }
+
+  .game-area {
+    width: 100%;
+  }
+}

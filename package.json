@@ -1,0 +1,28 @@
+{
+  "name": "a4-jennifer-yuan",
+  "version": "1.0.0",
+  "description": "Assignment 4 - Creative Coding: Interactive Multimedia Experiences\r ===",
+  "main": "index.js",
+ "scripts": {
+  "start": "node server.js",
+  "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cs-4241-26a/a4-creativecoding.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/cs-4241-26a/a4-creativecoding/issues"
+  },
+  "homepage": "https://github.com/cs-4241-26a/a4-creativecoding#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
