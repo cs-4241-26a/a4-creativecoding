@@ -1,0 +1,12 @@
+{
+  "name": "a4-creativecoding",
+  "version": "0.1.0",
+  "description": "WPI CS 4241 fourth assignment",
+  "author": "Frank Santen",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
