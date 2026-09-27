@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang='en'>
+    <head>
+        <title>Conway's Game of Life clone</title>
+        <meta name="description" content="Simple clone of Conway's game of life">
+        <script src='index.js'></script>
+        <link rel='stylesheet' href='index.css'/>
+        <meta charset='utf-8' />
+        <!-- get rid of favicon error -->
+        <link rel='icon' href='data:;base64,iVBORw0KGgo=' />
+    </head>
+    <body>
+        <p>
+            Welcome to a simple clone of Conway's game of life! Add live cells to the board by clicking. 
+            Change the game speed and zoom level with the sliders below. Pause/unpause using the buttons.
+        </p>
+        <div>
+            <input type="range" id="gameSpeed" name="gameSpeed" min="1" max="4" value="1" step="1"/>
+            <label for="gameSpeed">Game speed</label>
+        </div>
+        <div>
+            <input type="range" id="zoom" name="zoom" min="4" max="10" value="8" step="2"/>
+            <label for="zoom">Zoom in/out</label>
+        </div>
+        <div>
+            <button id="pause">Pause game</button>
+            <button id="unpause">Unpause game</button>
+            <p id="pauseIndicator">Game Paused</p>
+        </div>
+        <div>
+            <canvas id="canvas" width="500" height="500">
+                game's supposed to show up here. if you see this text, RUN. IT'S COMING.
+            </canvas>
+        </div>
+    </body>
+</html>
