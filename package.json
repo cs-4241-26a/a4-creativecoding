@@ -1,0 +1,20 @@
+{
+  "name": "",
+  "version": "",
+  "description": "",
+  "author": "",
+  "scripts": {
+    "build": "npm install express && npm install mime",
+    "start": "node coolerserver.js"
+  },
+  "dependencies": {
+    "canvas": "^3.2.3",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mime": "^2.6.0",
+    "mongodb": "^7.6.0"
+  },
+  "engines": {
+    "node": "24.x"
+  }
+}
