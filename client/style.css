@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background: #000;
+    font-family: Trebuchet MS;
+}
+
+canvas {
+    display: block;
+}
+
+.settings-menu {
+    p{
+        width: 100%;
+        color: white;
+    }
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    label{
+        color: white;
+        text-align: center;
+        align-content: center;
+    }
+    width: 200px;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Audio Visualizer</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.png" sizes="32x32">
+    <script
+            type="module"
+            src="./main.js"
+    ></script>
+</head>
+
+<body>
+
+<div id="settings-menu" class="settings-menu">
+    <label for="volume-slider">Volume: <span id="value">0.5</span></label>
+    <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5">
+    <label for="mesh1-slider">Bass Size: <span id="mesh1-value">0.5</span></label>
+    <input type="range" id="mesh1-slider" min="0" max="2" step="0.01" value="0.56">
+    <label for="mesh2-slider">Mids Size: <span id="mesh2-value">0.5</span></label>
+    <input type="range" id="mesh2-slider" min="0" max="2" step="0.01" value="0.91">
+    <label for="mesh3-slider">Highs Size: <span id="mesh3-value">0.5</span></label>
+    <input type="range" id="mesh3-slider" min="0" max="2" step="0.01" value="1.47">
+    <p>Please tap or click the screen to start the music. To add your own music click and drag the mp3 file into this window and then click the window to change the music to selected.</p>
+</div>
+
+</body>
+</html>

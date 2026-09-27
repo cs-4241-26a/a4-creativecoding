@@ -1,0 +1,25 @@
+{
+  "name": "a4-wenchen",
+  "version": "1.0.0",
+  "description": "Assignment 4 - Creative Coding: Interactive Multimedia Experiences\r ===",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node express.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Protocythr/a4-wenchen.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Protocythr/a4-wenchen/issues"
+  },
+  "homepage": "https://github.com/Protocythr/a4-wenchen#readme",
+  "devDependencies": {
+    "express": "^5.2.1",
+    "three": "^0.186.1"
+  }
+}
