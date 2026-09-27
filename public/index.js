@@ -25,9 +25,9 @@ window.onload = function() {
     initializeConwayArray()
 
     //add in a few initial values to start the player off
-    //conwayArray[5][5] = true
-    //conwayArray[6][6] = true
-    //conwayArray[7][6] = true
+    conwayArray[5][5] = true
+    conwayArray[6][6] = true
+    conwayArray[7][6] = true
 
     requestAnimationFrame(draw) //start render loop
 }
