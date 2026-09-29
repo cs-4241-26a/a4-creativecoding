@@ -1,0 +1,15 @@
+{
+  "name": "a4-charles-russell",
+  "version": "1.0.0",
+  "description": "An interactive D3.js data visualization",
+  "author": "Charles Russell",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "engines": {
+    "node": "24.x"
+  }
+}

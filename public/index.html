@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+    <title>UK Crime Visualization - A4</title>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+
+    <!-- type='module' lets main.js import the other files (and d3) instead of relying on globals -->
+    <script type='module' src='js/main.js'></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@picocss/pico@2.1.1/css/pico.min.css' />
+    <link rel='stylesheet' href='css/main.css' />
+
+    <!-- get rid of favicon error -->
+    <link rel='icon' href='data:;base64,iVBORw0KGgo=' />
+  </head>
+  <body>
+    <main class='container'>
+
+      <header id='page-header'>
+        <h1>UK Crime Visualization</h1>
+        <button type='button' id='help-button' class='secondary outline' aria-label='Show instructions'>?</button>
+      </header>
+
+      <div id='layout'>
+
+        <aside id='controls'>
+          <!-- Options are filled from data/UK_Crime_Data/files.json -->
+          <label for='crime-file'>Police force</label>
+          <select id='crime-file'></select>
+
+          <!-- Options are filled from the crime types found in the loaded file -->
+          <label for='filter-crime-type'>Crime type</label>
+          <select id='filter-crime-type'>
+            <option value='all'>All</option>
+          </select>
+
+          <fieldset>
+            <legend>Longitude</legend>
+            <label for='lon-min'>From: <output id='lon-min-output'>-180</output></label>
+            <input type='range' id='lon-min' min='-180' max='180' step='any' value='-180' />
+
+            <label for='lon-max'>To: <output id='lon-max-output'>180</output></label>
+            <input type='range' id='lon-max' min='-180' max='180' step='any' value='180' />
+          </fieldset>
+
+          <fieldset>
+            <legend>Latitude</legend>
+            <label for='lat-min'>From: <output id='lat-min-output'>-90</output></label>
+            <input type='range' id='lat-min' min='-90' max='90' step='any' value='-90' />
+
+            <label for='lat-max'>To: <output id='lat-max-output'>90</output></label>
+            <input type='range' id='lat-max' min='-90' max='90' step='any' value='90' />
+          </fieldset>
+        </aside>
+
+        <figure id='chart'></figure>
+
+      </div>
+
+      <!-- Hovering a mark fills and shows this -->
+      <div id='tooltip' hidden></div>
+
+    </main>
+
+    <dialog id='help-dialog'>
+      <article>
+        <h2>How to use this</h2>
+        <p>Each crime from the dataset (up to 350) is turned into a math function and graphed</p>
+        <ul>
+          <li><strong>Police force</strong>: What UK police force's crime data is being used</li>
+          <li><strong>Crime type</strong>: What kind of crime it was</li>
+          <li><strong>Longitude</strong>: The longitude of where the crime took place</li>
+          <li><strong>Latitude</strong>: The latitude of where the crime took place</li>
+          <li>Hover over a mark for crime details</li>
+        </ul>
+        <footer>
+          <button type='button' id='help-close'>Yup!</button>
+        </footer>
+      </article>
+    </dialog>
+  </body>
+</html>
