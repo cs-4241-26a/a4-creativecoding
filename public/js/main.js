@@ -220,6 +220,7 @@ function distortionNodes(inputNode) {
  * @returns an AudioNode with the echo effects applied
  */
 function echoNodes(inputNode) {
+	const passthrough = new GainNode(audioCtx, {gain: 1});
 	const delay = new DelayNode(audioCtx, {
 		delayTime: 0.5,
 		maxDelayTime: 10,
@@ -227,14 +228,15 @@ function echoNodes(inputNode) {
 	const feedback = new GainNode(audioCtx, {
 		gain: 0,
 	});
-	inputNode.connect(delay);
+	inputNode.connect(passthrough);
+	passthrough.connect(delay);
 	delay.connect(feedback);
-	feedback.connect(inputNode);
+	feedback.connect(passthrough);
 	audioNodes.echoNodes = {
 		delay,
 		feedback,
 	};
-	return inputNode;
+	return passthrough;
 }
 
 /**
