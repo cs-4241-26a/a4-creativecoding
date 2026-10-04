@@ -1,0 +1,7 @@
+node_modules/
+package-lock.json
+.env
+*.old
+TODO.*
+audiotest.html
+*.test

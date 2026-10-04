@@ -1,0 +1,16 @@
+{
+  "name": "a4-Richard-Newman",
+  "version": "",
+  "description": "WPI CS4241 assignment 4",
+  "author": "Richard Newman",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  },
+  "engines": {
+    "node": "24.x"
+  }
+}

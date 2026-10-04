@@ -1,0 +1,110 @@
+:root {
+  --default-background: #13171f;
+  --menu-color: #2b1a46;
+  --purpley: #6c1ceb;
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  background-color: var(--default-background);
+}
+
+main {
+  margin: 8px;
+  margin-bottom: 15lvh;
+
+  * {
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+}
+
+header {
+  border: 3px solid black;
+  background-color: var(--purpley);
+  color: white;
+  text-align: center;
+  text-shadow: -1px 1px 2px black;
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  width: 100%;
+
+  .authorBy {
+    font-family: Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 0.7rem;
+    text-shadow: -1px 1px 1px #404040;
+    text-align: right;
+  }
+}
+
+h1 {
+  margin: 4px 0;
+}
+
+audio {
+  color: var(--menu-color);
+}
+
+#audioFreqCanv {
+  width: 100%;
+  height: 100%;
+  border: 2px #090909 solid;
+  border-radius: 5px;
+}
+
+.audioPlayerContainer audio {
+  pointer-events: none;
+}
+
+.audioDisplayAndControlsContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  height: 45lvh;
+}
+
+.audioDisplayContainer {
+  width: 50lvw;
+}
+
+.audioFXControls {
+  width: 50lvw;
+  margin: 5px;
+}
+
+footer .credits {
+  font-style: italic;
+  color: #bbbcc4;
+  margin-top: 150px;
+}
+
+.audioFXButtons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  button {
+    padding: 5px 2px;
+    width: max(12lvw, 75px);
+
+  }
+}
+
+select,
+input,
+.audioFXButtons button {
+  border: var(--purpley) outset 2px;
+  background-color: var(--menu-color);
+  color: #eeeeee;
+  text-shadow: -1px 1px 2px black;
+  font-weight: bold;
+  text-align: center;
+}

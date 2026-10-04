@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <title>Audio Effect Playground</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="Audio effect playground made for Webware Assignment 4">
+  <script src="js/main.js" type="module"></script>
+  <script src="js/fxControls.js" type="module"></script>
+
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"> -->
+
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- get rid of favicon error -->
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <header>
+    <h1>
+      Audio Effect Playground <span class="authorBy">By Richard Newman</span>
+    </h1>
+  </header>
+  <main>
+    <div class="audioSelectorContainer">
+      <label for="audioSelector">Select a song:</label>
+      <select id="audioSelector">
+        <option value="Carefree.mp3">Carefree</option>
+        <option value="Local Forecast - Elevator.mp3">Local Forecast - Elevator</option>
+        <option value="Killers.mp3">Killers</option>
+        <option value="Who Likes to Party.mp3">Who Likes to Party</option>
+        <option value="upload">Upload your own!</option>
+      </select>
+      <input type="file" id="audioFileInput" accept="audio/*" hidden />
+    </div>
+    <div class="audioPlayerContainer">
+      <audio controls src="./audio/Carefree.mp3" controlslist="noplaybackrate nodownload" disabled></audio>
+    </div>
+    <div class="audioFXButtons">
+      <button type="button" id="pitchTempoBtn">Pitch & Tempo</button>
+      <button type="button" id="panBtn">Pan</button>
+      <button type="button" id="EQBtn">EQ</button>
+      <button type="button" id="bitcrusherBtn">Bitcrusher</button>
+      <button type="button" id="distortionBtn">Distortion</button>
+      <button type="button" id="echoBtn">Echo</button>
+      <button type="button" id="stereoDiffBtn">Stereo Difference</button>
+
+    </div>
+    <div class="audioDisplayAndControlsContainer">
+      <div class="audioDisplayContainer">
+        <canvas id="audioFreqCanv"></canvas>
+      </div>
+      <div class="audioFXControls"></div>
+    </div>
+
+  </main>
+  <footer>
+    <p class="credits">
+      Sample Music by Kevin MacLeod (incompetech.com)
+      Licensed under Creative Commons: By Attribution 4.0
+      https://creativecommons.org/licenses/by/4.0/
+    </p>
+
+  </footer>
+</body>
+
+</html>
